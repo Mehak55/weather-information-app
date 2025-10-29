@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Weather.css">
+</head>
+<body>
+  <!-- Input Form Page -->
+  <div id="landing" class="landing">
+    <form id="weatherForm" class="weather-form">
+      <h1>🌤️ Weather Information</h1>
+      <p>Get the current temperature, humidity, wind speed, and more!</p>
+      <div class="form-group">
+        <label for="cityInput">Enter City Name:</label>
+        <input type="text" id="cityInput" placeholder="e.g. New York" required>
+      </div>
+      <button type="submit" id="searchBtn">Get Weather</button>
+    </form>
+  </div>
+
+  <!-- Weather Display Page -->
+  <div id="app" class="app hidden">
+    <div class="weather-container">
+      <button id="backBtn" class="back-btn">⬅ Back</button>
+      <h2 id="cityName"></h2>
+      <div id="weatherIcon" class="weather-icon"></div>
+      <p id="temperature"></p>
+      <p id="description"></p>
+      <p id="humidity"></p>
+      <p id="pressure"></p>
+      <p id="wind"></p>
+    </div>
+    <canvas id="weatherCanvas"></canvas>
+  </div>
+
+  <script src="Weather.js"></script>
+</body>
+</html>
